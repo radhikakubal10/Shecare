@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shecare - Apsit Girls Support Network</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffe6f0; 
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .container {
+      margin-top: 80px; 
+    }
+ 
+    .navbar-custom {
+      background-color: #ffe6f0;
+    }
+    .navbar-brand {
+      color: #d63384; 
+      font-weight: bold;
+    }
+    .nav-link {
+      color: #d63384;
+      margin-right: 15px;
+    }
+    .nav-link:hover {
+      color: #ff69b4;
+      
+    }
+    .btn-login {
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .btn-login:hover {
+      background-color: #ff69b4; 
+    }
+  
+
+    .carousel-item img {
+      width: 100%;
+      height: 80vh; 
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px;
+      border-radius: 5px;
+    }
+ 
+    .content {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Shecare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarShecare" aria-controls="navbarShecare" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: #cd2f7e;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarShecare">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Live Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pgfinder.html">PG Finder</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Anonymous Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chatbot</a>
+          </li>
+        </ul>
+        <button class="btn btn-login" type="button">Login</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+  
+    <div id="shecareCarousel" class="carousel slide" data-bs-ride="carousel">
+   
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#shecareCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#shecareCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#shecareCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+ 
+      </div>
+
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active">
+          <img src="https://via.placeholder.com/1200x800.png?text=Support+Community" class="d-block w-100" alt="Support Community">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Support Community</h5>
+            <p>Connect with peers and build a supportive network.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/1200x800.png?text=Find+PGs" class="d-block w-100" alt="Find PGs">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Find PGs</h5>
+            <p>Locate nearby PGs and hostels that meet your needs.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/1200x800.png?text=Track+Your+Cycle" class="d-block w-100" alt="Track Your Cycle">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Period Tracker</h5>
+            <p>Manage and track your menstrual cycle effortlessly.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/1200x800.png?text=Anonymous+Feedback" class="d-block w-100" alt="Anonymous Feedback">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Anonymous Feedback</h5>
+            
+            <p>Share your thoughts and suggestions anonymously.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#shecareCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#shecareCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="content text-center">
+      <h2>Welcome to Shecare</h2>
+      <p>Digital support network tailored for Apsit girls. Explore our features to enhance your college experience.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize the carousel with autoplay settings
+    var myCarousel = document.querySelector('#shecareCarousel')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 3000, // Slide interval in milliseconds (3 seconds)
+      ride: 'carousel',
+      pause: 'hover',
+      wrap: true
+    })
+  </script>
+</body>
+</html>

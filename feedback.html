@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Feedback</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Anonymous Feedback</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="feedbackType">Type of Feedback</label>
+                        <select class="form-control" id="feedbackType" required>
+                            <option value="" disabled selected>Select type</option>
+                            <option value="Compliment">Compliment</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Your Feedback</label>
+                        <textarea class="form-control" id="feedbackMessage" rows="5" placeholder="Enter your feedback here..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </div>
+                </form>
+                <div id="responseMessage" class="alert mt-3" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Handle form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var feedbackType = document.getElementById('feedbackType').value;
+            var feedbackMessage = document.getElementById('feedbackMessage').value;
+
+            if(feedbackType && feedbackMessage) {
+                document.getElementById('responseMessage').style.display = 'block';
+                document.getElementById('responseMessage').classList.add('alert-success');
+                document.getElementById('responseMessage').textContent = 'Thank you for your feedback!';
+                
+                // Clear the form
+                document.getElementById('feedbackForm').reset();
+            } else {
+                document.getElementById('responseMessage').style.display = 'block';
+                document.getElementById('responseMessage').classList.add('alert-danger');
+                document.getElementById('responseMessage').textContent = 'Please fill out all fields before submitting.';
+            }
+        });
+    </script>
+</body>
+</html>
